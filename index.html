@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220615221156">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220623181926">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220623181926"/>
     <!-- ------------------google-fonts-------------------- -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap&_v=20220615221156" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap&_v=20220615221156" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap&_v=20220615221156" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap&_v=20220615221156" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap&_v=20220615221156" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap&_v=20220615221156" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap&_v=20220615221156" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap&_v=20220623181926" rel="stylesheet">
     <title>OceanNFT</title>
 </head>
 <body>
@@ -21,17 +23,20 @@
             <header class="header">
     <div class="container header-container flex">
         <a href="#" class="logo header-logo"><img src="img/logo-etherium.svg" alt="logo" class="logo-img">Ocean<span>NFT</span></a>
-        <nav class="header-nav">
-            <ul class="main-menu flex">
-                <li class="menu-item"><a href="#" class="menu-link">Market</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Features</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Community</a></li>
-            </ul>
-        </nav>
-        <div class="header-icons flex">
-            <button class="button-cart"><img src="img/cart.svg" alt="cart"></button>
-            <button class="button-user"><img src="img/user.svg" alt="user"></button>
+        <div class="header-menu flex">
+            <nav class="header-nav">
+                <ul class="main-menu flex">
+                    <li class="menu-item"><a href="#" class="menu-link">Market</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Features</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Community</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons flex">
+                <button class="button-cart"><img src="img/cart.svg" alt="cart"></button>
+                <button class="button-user"><img src="img/user.svg" alt="user"></button>
+            </div>
         </div>
+        <button type="button" class="media-menu__icon"><span></span></button>
     </div>
 </header>
             <main>
@@ -41,11 +46,12 @@
                             <h1 class="main-info__title">Discover, collect, and sell <span>Timeless</span> NFTs</h1>
                             <p class="main-info__text">The world’s first and largest digital marketplace for crypto collectibles and non- fungible tokens (NFTs).</p>
                             <div class="main-info__buttons">
-                                <button class="button-explore">Explore</button>
+                                <button class="button-explore">Explore<img src="img/arrow-explore.svg" alt="arrow" class="arrow-explore"></button>
                                 <button class="button-create-nft">Create NFT’s</button>
                             </div>
                             <div class="main-info__progress flex">
                                 <div class="progress-item artwork">
+                                    <div class="artwork__ellipse"></div>
                                     <p class="progress-item__amount">35m+</p>
                                     <p class="progress-item__title">Artwork</p>
                                 </div>
@@ -64,11 +70,11 @@
                             <div class="nft__descr flex">
                                 <div class="descr-column">
                                     <h3 class="descr-title">3D Abstract Hand</h3>
-                                    <div class="descr-user flex">
+                                    <a href="#" class="descr-user flex">
                                         <img src="img/avatars/ava1.png" alt="ava" class="user-ava">
                                         <p class="user-nikname">@jhonartist</p>
                                         <img src="img/verification.svg" alt="verif" class="user-verif">
-                                    </div>
+                                    </a>
                                     <p class="reserve-price">Reserve price</p>
                                     <div class="descr-price flex">
                                         <img src="img/eth-white.svg" alt="ethereum" class="price-img">
@@ -96,237 +102,244 @@
                             </div>
                         </div>
                         <div class="intro-partners flex">
-                            <div class="intro-partners__item"><img src="img/binance.svg" alt="binance" class="intro-partners__img"></div>
-                            <div class="intro-partners__item"><img src="img/ethereum.svg" alt="ethereum" class="intro-partners__img"></div>
-                            <div class="intro-partners__item"><img src="img/blockchain.svg" alt="blockchain" class="intro-partners__img"></div>
-                            <div class="intro-partners__item"><img src="img/bitmex.svg" alt="bitmex" class="intro-partners__img"></div>
+                            <a href="#" class="intro-partners__item"><img src="img/binance.svg" alt="binance" class="intro-partners__img"></a>
+                            <a href="#" class="intro-partners__item"><img src="img/ethereum.svg" alt="ethereum" class="intro-partners__img"></a>
+                            <a href="#" class="intro-partners__item"><img src="img/blockchain.svg" alt="blockchain" class="intro-partners__img"></a>
+                            <a href="#" class="intro-partners__item"><img src="img/bitmex.svg" alt="bitmex" class="intro-partners__img"></a>
                         </div>
                     </div>
                 </section>
                 <section class="topnft">
                     <div class="container topnft-container">
                         <div class="topnft-header flex">
-                            <h2 class="topnft-title"></h2>
+                            <h2 class="topnft-title">Top NFT’s now</h2>
                             <a href="#" class="topnft-viewall viewall">View all<img src="img/arrow.svg" alt="arrow"></a>
                         </div>
-                        <div class="topnft-items flex">
-                            <div class="topnft-item">
-                                <img src="img/Apollo Eth.jpg" class="nft-img" alt="nft">
-                                <div class="nft__descr flex">
-                                    <div class="descr-column">
-                                        <h3 class="descr-title">3D Abstract Hand</h3>
-                                        <div class="descr-user flex">
-                                            <img src="img/avatars/ava1.png" alt="ava" class="user-ava">
-                                            <p class="user-nikname">@jhonartist</p>
-                                            <img src="img/verification.svg" alt="verif" class="user-verif">
+                        <!-- <div class="swiper topnft-swiper"> -->
+                            <div class="topnft-items flex">
+                                <div class="topnft-item">
+                                    <img src="img/Apollo Eth.jpg" class="nft-img" alt="nft">
+                                    <div class="nft__descr flex">
+                                        <div class="descr-column">
+                                            <h3 class="descr-title">3D Abstract Hand</h3>
+                                            <a href="#" class="descr-user flex">
+                                                <img src="img/avatars/ava1.png" alt="ava" class="user-ava">
+                                                <p class="user-nikname">@jhonartist</p>
+                                                <img src="img/verification.svg" alt="verif" class="user-verif">
+                                            </a>
+                                            <p class="reserve-price">Reserve price</p>
+                                            <div class="descr-price flex">
+                                                <img src="img/eth-white.svg" alt="ethereum" class="price-img">
+                                                <p class="price-eth">ETH 9.31<span class="price-dollar">($29,8846)</span></p>
+                                            </div>
                                         </div>
-                                        <p class="reserve-price">Reserve price</p>
-                                        <div class="descr-price flex">
-                                            <img src="img/eth-white.svg" alt="ethereum" class="price-img">
-                                            <p class="price-eth">ETH 9.31<span class="price-dollar">($29,8846)</span></p>
+                                        <div class="descr-column auction">
+                                            <p class="auction-title">Auction Ends in</p>
+                                            <div class="auction-time flex">
+                                                <div class="auction-time__hours">
+                                                    <p class="time-num">18</p>
+                                                    <p class="time-title">Hours</p>
+                                                </div>
+                                                <div class="auction-time__mins">
+                                                    <p class="time-num">25</p>
+                                                    <p class="time-title">Mins</p>
+                                                </div>
+                                                <div class="auction-time__secs">
+                                                    <p class="time-num">44</p>
+                                                    <p class="time-title">Secs</p>
+                                                </div>
+                                            </div>
+                                            <button class="auction-button">Place Bid</button>
                                         </div>
                                     </div>
-                                    <div class="descr-column auction">
-                                        <p class="auction-title">Auction Ends in</p>
-                                        <div class="auction-time flex">
-                                            <div class="auction-time__hours">
-                                                <p class="time-num">18</p>
-                                                <p class="time-title">Hours</p>
-                                            </div>
-                                            <div class="auction-time__mins">
-                                                <p class="time-num">25</p>
-                                                <p class="time-title">Mins</p>
-                                            </div>
-                                            <div class="auction-time__secs">
-                                                <p class="time-num">44</p>
-                                                <p class="time-title">Secs</p>
+                                </div>
+                                <div class="topnft-item">
+                                    <img src="img/Sassy Bull.jpg" class="nft-img" alt="nft">
+                                    <div class="nft__descr flex">
+                                        <div class="descr-column">
+                                            <h3 class="descr-title">3D Abstract Hand</h3>
+                                            <a href="#" class="descr-user flex">
+                                                <img src="img/avatars/ava2.png" alt="ava" class="user-ava">
+                                                <p class="user-nikname">@jhonartist</p>
+                                                <img src="img/verification.svg" alt="verif" class="user-verif">
+                                            </a>
+                                            <p class="reserve-price">Reserve price</p>
+                                            <div class="descr-price flex">
+                                                <img src="img/eth-white.svg" alt="ethereum" class="price-img">
+                                                <p class="price-eth">ETH 9.31<span class="price-dollar">($29,8846)</span></p>
                                             </div>
                                         </div>
-                                        <button class="auction-button">Place Bid</button>
+                                        <div class="descr-column auction">
+                                            <p class="auction-title">Auction Ends in</p>
+                                            <div class="auction-time flex">
+                                                <div class="auction-time__hours">
+                                                    <p class="time-num">18</p>
+                                                    <p class="time-title">Hours</p>
+                                                </div>
+                                                <div class="auction-time__mins">
+                                                    <p class="time-num">25</p>
+                                                    <p class="time-title">Mins</p>
+                                                </div>
+                                                <div class="auction-time__secs">
+                                                    <p class="time-num">44</p>
+                                                    <p class="time-title">Secs</p>
+                                                </div>
+                                            </div>
+                                            <button class="auction-button">Place Bid</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="topnft-item">
+                                    <img src="img/Satisfying.jpg" class="nft-img" alt="nft">
+                                    <div class="nft__descr flex">
+                                        <div class="descr-column">
+                                            <h3 class="descr-title">3D Abstract Hand</h3>
+                                            <a href="#" class="descr-user flex">
+                                                <img src="img/avatars/ava3.png" alt="ava" class="user-ava">
+                                                <p class="user-nikname">@jhonartist</p>
+                                                <img src="img/verification.svg" alt="verif" class="user-verif">
+                                            </a>
+                                            <p class="reserve-price">Reserve price</p>
+                                            <div class="descr-price flex">
+                                                <img src="img/eth-white.svg" alt="ethereum" class="price-img">
+                                                <p class="price-eth">ETH 9.31<span class="price-dollar">($29,8846)</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="descr-column auction">
+                                            <p class="auction-title">Auction Ends in</p>
+                                            <div class="auction-time flex">
+                                                <div class="auction-time__hours">
+                                                    <p class="time-num">18</p>
+                                                    <p class="time-title">Hours</p>
+                                                </div>
+                                                <div class="auction-time__mins">
+                                                    <p class="time-num">25</p>
+                                                    <p class="time-title">Mins</p>
+                                                </div>
+                                                <div class="auction-time__secs">
+                                                    <p class="time-num">44</p>
+                                                    <p class="time-title">Secs</p>
+                                                </div>
+                                            </div>
+                                            <button class="auction-button">Place Bid</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="topnft-item">
-                                <img src="img/Sassy Bull.jpg" class="nft-img" alt="nft">
-                                <div class="nft__descr flex">
-                                    <div class="descr-column">
-                                        <h3 class="descr-title">3D Abstract Hand</h3>
-                                        <div class="descr-user flex">
-                                            <img src="img/avatars/ava2.png" alt="ava" class="user-ava">
-                                            <p class="user-nikname">@jhonartist</p>
-                                            <img src="img/verification.svg" alt="verif" class="user-verif">
-                                        </div>
-                                        <p class="reserve-price">Reserve price</p>
-                                        <div class="descr-price flex">
-                                            <img src="img/eth-white.svg" alt="ethereum" class="price-img">
-                                            <p class="price-eth">ETH 9.31<span class="price-dollar">($29,8846)</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="descr-column auction">
-                                        <p class="auction-title">Auction Ends in</p>
-                                        <div class="auction-time flex">
-                                            <div class="auction-time__hours">
-                                                <p class="time-num">18</p>
-                                                <p class="time-title">Hours</p>
-                                            </div>
-                                            <div class="auction-time__mins">
-                                                <p class="time-num">25</p>
-                                                <p class="time-title">Mins</p>
-                                            </div>
-                                            <div class="auction-time__secs">
-                                                <p class="time-num">44</p>
-                                                <p class="time-title">Secs</p>
-                                            </div>
-                                        </div>
-                                        <button class="auction-button">Place Bid</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="topnft-item">
-                                <img src="img/Satisfying.jpg" class="nft-img" alt="nft">
-                                <div class="nft__descr flex">
-                                    <div class="descr-column">
-                                        <h3 class="descr-title">3D Abstract Hand</h3>
-                                        <div class="descr-user flex">
-                                            <img src="img/avatars/ava3.png" alt="ava" class="user-ava">
-                                            <p class="user-nikname">@jhonartist</p>
-                                            <img src="img/verification.svg" alt="verif" class="user-verif">
-                                        </div>
-                                        <p class="reserve-price">Reserve price</p>
-                                        <div class="descr-price flex">
-                                            <img src="img/eth-white.svg" alt="ethereum" class="price-img">
-                                            <p class="price-eth">ETH 9.31<span class="price-dollar">($29,8846)</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="descr-column auction">
-                                        <p class="auction-title">Auction Ends in</p>
-                                        <div class="auction-time flex">
-                                            <div class="auction-time__hours">
-                                                <p class="time-num">18</p>
-                                                <p class="time-title">Hours</p>
-                                            </div>
-                                            <div class="auction-time__mins">
-                                                <p class="time-num">25</p>
-                                                <p class="time-title">Mins</p>
-                                            </div>
-                                            <div class="auction-time__secs">
-                                                <p class="time-num">44</p>
-                                                <p class="time-title">Secs</p>
-                                            </div>
-                                        </div>
-                                        <button class="auction-button">Place Bid</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </section>
                 <section class="explore">
                     <div class="container explore-container flex">
-                        <div class="explore-column__left">
+                        <div class="explore-column__buttons">
                             <h2 class="explore-title">Explore Collections</h2>
                             <div class="explore-buttons flex">
-                                <button class="explore-button">Photography</button>
-                                <button class="explore-button">Sports</button>
-                                <button class="explore-button">Brands</button>
-                                <button class="explore-button">Collectibles</button>
-                                <button class="explore-button">Art</button>
-                                <button class="explore-button">Utility</button>
-                                <button class="explore-button">Brands</button>
-                                <button class="explore-button">Collectibles</button>
+                                <button class="explore-button" data-tab="#tab_1">Photography</button>
+                                <button class="explore-button" data-tab="#tab_2">Sports</button>
+                                <button class="explore-button" data-tab="#tab_3">Brands</button>
+                                <button class="explore-button" data-tab="#tab_4">Collectibles</button>
+                                <button class="explore-button" data-tab="#tab_5">Art</button>
+                                <button class="explore-button" data-tab="#tab_6">Utility</button>
+                                <button class="explore-button" data-tab="#tab_7">Brands</button>
+                                <button class="explore-button" data-tab="#tab_8">Collectibles</button>
                             </div>
                             <a href="#" class="explore-viewall viewall">View all<img src="img/arrow.svg" alt="arrow"></a>
                         </div>
-                        <div class="explore-column__right">
-                            <img src="img/girls.png" alt="girl-nft" class="explore-girl">
+                        <div class="explore-column__img">
+                            <img src="img/taps/girls.png" alt="girl-nft" class="explore-img active" id="tab_1">
+                            <img src="img/taps/girl2.png" alt="girl-nft" class="explore-img" id="tab_2">
+                            <img src="img/taps/photo3.png" alt="girl-nft" class="explore-img" id="tab_3">
+                            <img src="img/taps/photo4.png" alt="girl-nft" class="explore-img" id="tab_4">
+                            <img src="img/taps/photo5.png" alt="girl-nft" class="explore-img" id="tab_5">
                         </div>
                     </div>
                 </section>
                 <section class="users">
                     <div class="container users-container">
                         <div class="users-header flex">
-                            <h2 class="topnft-title"></h2>
-                            <a href="#" class="topnft-viewall viewall">View all<img src="img/arrow.svg" alt="arrow"></a>
+                            <h2 class="users-title">Explore Collections</h2>
+                            <a href="#" class="users-viewall viewall">View all<img src="img/arrow.svg" alt="arrow"></a>
                         </div>
-                        <div class="users-items flex">
-                            <div class="user-item flex">
-                                <img src="img/user-bg.jpg" alt="user-item__bg" class="user-item__bg">
-                                <div class="user-item__descr">
-                                    <img src="img/jhones-nickey.png" alt="user-item__photo" class="user-item__photo">
-                                    <p class="user-item__name">Jhones Nickey</p>
-                                    <p class="user-item__nikname">@jhonartist<img src="img/verification.svg" alt="verif" class="user-verif"></p>
-                                    <div class="user-item__status flex">
-                                        <div class="user-item__folowers">
-                                            <p class="item-status__num">125</p>
-                                            <p class="item-status__title">Folowers</p>
+                        <div class="swiper users-swiper">
+                            <div class="users-items flex swiper-wrapper">
+                                <div class="user-item flex swiper-slide">
+                                    <img src="img/user-bg.jpg" alt="user-item__bg" class="user-item__bg">
+                                    <div class="user-item__descr">
+                                        <div class="user-item__photo-wrap"><img src="img/jhones-nickey.png" alt="user-item__photo" class="user-item__photo"></div>
+                                        <p class="user-item__name">Jhones Nickey</p>
+                                        <a href="#" class="user-item__nikname flex">@jhonartist<img src="img/verification.svg" alt="verif" class="user-verif"></a>
+                                        <div class="user-item__status flex">
+                                            <div class="user-item__folowers">
+                                                <p class="item-status__num">125</p>
+                                                <p class="item-status__title">Folowers</p>
+                                            </div>
+                                            <div class="user-item__following">
+                                                <p class="item-status__num">256</p>
+                                                <p class="item-status__title">Following</p>
+                                            </div>
+                                            <div class="user-item__artworks">
+                                                <p class="item-status__num">129</p>
+                                                <p class="item-status__title">Artworks</p>
+                                            </div>
                                         </div>
-                                        <div class="user-item__following">
-                                            <p class="item-status__num">256</p>
-                                            <p class="item-status__title">Following</p>
-                                        </div>
-                                        <div class="user-item__artworks">
-                                            <p class="item-status__num">129</p>
-                                            <p class="item-status__title">Artworks</p>
-                                        </div>
+                                        <button class="follow">Follow</button>
                                     </div>
-                                    <button class="follow">Follow</button>
                                 </div>
-                            </div>
-
-                            <div class="user-item flex">
-                                <img src="img/user-bg.jpg" alt="user-item__bg" class="user-item__bg">
-                                <div class="user-item__descr">
-                                    <img src="img/cody-fisher.png" alt="user-item__photo" class="user-item__photo">
-                                    <p class="user-item__name">Cody Fisher</p>
-                                    <p class="user-item__nikname">@codyfishe<img src="img/verification.svg" alt="verif" class="user-verif"></p>
-                                    <div class="user-item__status flex">
-                                        <div class="user-item__folowers">
-                                            <p class="item-status__num">356</p>
-                                            <p class="item-status__title">Folowers</p>
+                                <div class="user-item flex swiper-slide">
+                                    <img src="img/user-bg.jpg" alt="user-item__bg" class="user-item__bg">
+                                    <div class="user-item__descr">
+                                        <div class="user-item__photo-wrap"><img src="img/cody-fisher.png" alt="user-item__photo" class="user-item__photo"></div>
+                                        <p class="user-item__name">Cody Fisher</p>
+                                        <a href="#" class="user-item__nikname flex">@codyfishe<img src="img/verification.svg" alt="verif" class="user-verif"></a>
+                                        <div class="user-item__status flex">
+                                            <div class="user-item__folowers">
+                                                <p class="item-status__num">356</p>
+                                                <p class="item-status__title">Folowers</p>
+                                            </div>
+                                            <div class="user-item__following">
+                                                <p class="item-status__num">456</p>
+                                                <p class="item-status__title">Following</p>
+                                            </div>
+                                            <div class="user-item__artworks">
+                                                <p class="item-status__num">89</p>
+                                                <p class="item-status__title">Artworks</p>
+                                            </div>
                                         </div>
-                                        <div class="user-item__following">
-                                            <p class="item-status__num">456</p>
-                                            <p class="item-status__title">Following</p>
-                                        </div>
-                                        <div class="user-item__artworks">
-                                            <p class="item-status__num">89</p>
-                                            <p class="item-status__title">Artworks</p>
-                                        </div>
+                                        <button class="follow">Follow</button>
                                     </div>
-                                    <button class="follow">Follow</button>
                                 </div>
-                            </div>
-
-                            <div class="user-item flex">
-                                <img src="img/user-bg.jpg" alt="user-item__bg" class="user-item__bg">
-                                <div class="user-item__descr">
-                                    <img src="img/jerome-bell.png" alt="user-item__photo" class="user-item__photo">
-                                    <p class="user-item__name">Jerome Bell</p>
-                                    <p class="user-item__nikname">@jeromebt<img src="img/verification.svg" alt="verif" class="user-verif"></p>
-                                    <div class="user-item__status flex">
-                                        <div class="user-item__folowers">
-                                            <p class="item-status__num">546</p>
-                                            <p class="item-status__title">Folowers</p>
+                                <div class="user-item flex swiper-slide">
+                                    <img src="img/user-bg.jpg" alt="user-item__bg" class="user-item__bg">
+                                    <div class="user-item__descr">
+                                        <div class="user-item__photo-wrap"><img src="img/jerome-bell.png" alt="user-item__photo" class="user-item__photo"></div>
+                                        <p class="user-item__name">Jerome Bell</p>
+                                        <a href="#" class="user-item__nikname flex">@jeromebt<img src="img/verification.svg" alt="verif" class="user-verif"></a>
+                                        <div class="user-item__status flex">
+                                            <div class="user-item__folowers">
+                                                <p class="item-status__num">546</p>
+                                                <p class="item-status__title">Folowers</p>
+                                            </div>
+                                            <div class="user-item__following">
+                                                <p class="item-status__num">789</p>
+                                                <p class="item-status__title">Following</p>
+                                            </div>
+                                            <div class="user-item__artworks">
+                                                <p class="item-status__num">54</p>
+                                                <p class="item-status__title">Artworks</p>
+                                            </div>
                                         </div>
-                                        <div class="user-item__following">
-                                            <p class="item-status__num">789</p>
-                                            <p class="item-status__title">Following</p>
-                                        </div>
-                                        <div class="user-item__artworks">
-                                            <p class="item-status__num">54</p>
-                                            <p class="item-status__title">Artworks</p>
-                                        </div>
+                                        <button class="follow">Follow</button>
                                     </div>
-                                    <button class="follow">Follow</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="sellers">
-                    <h2 class="sellers-title">Top Sellers this <span>Month</span></h2>
-                    <p class="sellers-descr">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim minim mollit.</p>
+                    <div class="container">
+                        <h2 class="sellers-title">Top Sellers this <a href="#" class="month-selection">Month</a></h2>
+                        <p class="sellers-descr">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim minim mollit.</p>
+                    </div>
                     <div class="container sellers-container flex">
                         <div class="sellers-item flex">
                             <p class="sellers-item__num">1</p>
@@ -338,7 +351,7 @@
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
-                        <div class="sellers-item flex red">
+                        <div class="sellers-item flex sellers-item__red">
                             <p class="sellers-item__num">2</p>
                             <img src="img/top-sellers/Savannah Nguyen.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
@@ -358,103 +371,200 @@
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
-                        <div class="sellers-item flex red">
+                        <div class="sellers-item flex sellers-item__red">
                             <p class="sellers-item__num">4</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Esther Howard.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Esther Howard</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">16627</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
                         <div class="sellers-item flex">
                             <p class="sellers-item__num">5</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Robert Fox.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Robert Fox</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">9631</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
                         <div class="sellers-item flex">
                             <p class="sellers-item__num">6</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Darlene Robertson.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Darlene Robertson</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">70443</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
                         <div class="sellers-item flex">
                             <p class="sellers-item__num">7</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Jacob Jones.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Jacob Jones</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">13671</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
-                        <div class="sellers-item flex red">
+                        <div class="sellers-item flex sellers-item__red">
                             <p class="sellers-item__num">8</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Jerome Bell.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Jerome Bell</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">39235</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
-                        <div class="sellers-item flex red">
+                        <div class="sellers-item flex sellers-item__red">
                             <p class="sellers-item__num">9</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Wade Warren.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Wade Warren</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">43359</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
-                        <div class="sellers-item flex red">
+                        <div class="sellers-item flex sellers-item__red">
                             <p class="sellers-item__num">10</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Jane Cooper.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Jane Cooper</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">95554</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
                         <div class="sellers-item flex">
                             <p class="sellers-item__num">11</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Kristin Watson.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Kristin Watson</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">20796</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
 
-                        <div class="sellers-item flex red">
+                        <div class="sellers-item flex sellers-item__red">
                             <p class="sellers-item__num">12</p>
-                            <img src="img/top-sellers/Eleanor Pena.png" alt="sellers-photo" class="sellers-item__photo">
+                            <img src="img/top-sellers/Kathryn Murphy.png" alt="sellers-photo" class="sellers-item__photo">
                             <div class="sellers-item__descr">
-                                <p class="sellers-item__name">Eleanor Pena</p>
-                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">74875</p>
+                                <p class="sellers-item__name">Kathryn Murphy</p>
+                                <p class="sellers-item__condition"><img src="img/eth-white.svg" alt="eth" class="condition-eth">4339</p>
                             </div>
                             <p class="sellers-item__persent">+468.48%</p>
                         </div>
                     </div>
                     <button class="sellers-button">Explore all</button>
                 </section>
+                <section class="whats">
+                    <div class="container whats-container">                     
+                        <div class="whats-block">
+                            <h2 class="whats-title">What are NFT’s ?</h2>
+                            <p class="whats-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum quis amet, faucibus lorem. Lectus amet odio quis sed adipiscing adipiscing magna non. Nullam turpis faucibus ridiculus suscipit. Et blandit suspendisse curabitur eu congue dui ut.
+                            </p>
+                            <div class="whats-links flex">
+                                <a href="#" class="whats-link__learn-more">Learn more</a>
+                                <a href="#" class="whats-link__watch-video">Watch video</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="subscribe">
+                    <div class="container subscribe-container flex">
+                        <img src="img/subscribe.jpg" alt="subscribe-bg" class="subscribe-bg">
+                        <form action="" class="subscribe-form">
+                            <h2 class="subscribe-title">Subscribe to us</h2>
+                            <p class="subscribe-text">Specially developed to help restore a more youthful appearance with improved radiance and bounce.</p>
+                            <div class="form-submit flex">
+                                <input type="e-mail" class="subscribe-email" name="email" placeholder="Your work email address">
+                                <button type="submit" class="subscribe-button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
 
             </main>
-            <footer class="footer"></footer>
+            <footer class="footer">
+    <div class="container footer-container flex">
+        <div class="footer-social">
+            <a href="#" class="logo footer-logo"><img src="img/logo-etherium.svg" alt="logo" class="logo-img">Ocean<span>NFT</span></a>
+            <p class="footer-social__text">Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non nisi, placerat.</p>
+            <div class="footer-social__links flex">
+                <a href="#" class="footer-social__link"><img src="img/instagram.svg" alt="instagram" class="footer-social__icon"></a>
+                <a href="#" class="footer-social__link"><img src="img/ball.svg" alt="dribbble" class="footer-social__icon"></a>
+                <a href="#" class="footer-social__link"><img src="img/twitter.svg" alt="twitter" class="footer-social__icon"></a>
+                <a href="#" class="footer-social__link"><img src="img/youtube.svg" alt="youtube" class="footer-social__icon"></a>
+            </div>
+        </div>
+        <nav class="footer-nav flex">
+            <ul class="footer-nav__menu market">
+                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Market place</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Overview</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Features<span class="footer-nav__menu-new">new</span></a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Tutorials</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Pricing</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Releases</a></li>
+            </ul>
+
+            <ul class="footer-nav__menu collectibles">
+                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Collectibles</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">About</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Press</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Careers</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Contact</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Partners</a></li>
+            </ul>
+
+            <ul class="footer-nav__menu support">
+                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Support</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Help Center</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Safety Center</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Legal</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Privacy policy</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Status</a></li>
+            </ul>
+
+            <ul class="footer-nav__menu legal">
+                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Legal</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Cookies Policy</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Privacy Policy</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Terms of Service</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Law Enforcement</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Status</a></li>
+            </ul>
+
+            <ul class="footer-nav__menu follow-us">
+                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Follow us</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Facebook</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Twitter</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Dribbble</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Instagram</a></li>
+                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container copyright-container flex">
+        <p>© 2020 Landify UI Kit. All rights reserved</p>
+        <ul class="copyright-menu flex">
+            <li class="copyright-menu__list"><a href="#" class="copyright-menu__link">Terms & Conditions</a></li>
+            <li class="copyright-menu__list"><a href="#" class="copyright-menu__link">Privacy Policy</a></li>
+            <li class="copyright-menu__list"><a href="#" class="copyright-menu__link">Sitemap</a></li>
+        </ul>
+    </div>
+</footer>
         </div>
     </div>
-    <script src="js/main.js?_v=20220615221156"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20220623181926" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220623181926"></script>
+    <script src="js/main.js?_v=20220623181926"></script>
 </body>
 </html>
