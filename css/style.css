@@ -333,14 +333,15 @@ footer {
 
 body {
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  background-color: #23134b;
   box-sizing: border-box;
   color: #fff;
 }
 
 .body-bg {
   width: 100%;
+  margin: 0 auto;
+  max-width: 1600px;
   height: 100%;
   background-color: #01204C;
   background-image: url(../img/body-bg.jpg);
@@ -351,6 +352,8 @@ body {
 
 .body-blur {
   width: 100%;
+  margin: 0 auto;
+  max-width: 1600px;
   height: 100%;
   background: rgba(32, 8, 59, 0.75);
   -webkit-backdrop-filter: blur(50px);
@@ -413,6 +416,37 @@ h2 {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.explore-media-button__wrap {
+  display: none;
+  width: 149.5px;
+  height: 47px;
+  position: relative;
+  background: linear-gradient(92.23deg, #FF56F6 21.43%, #B936EE 50.63%, #3BACE2 100%, #406AFF 117.04%);
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 70%, 80% 100%, 0 99%, 0 34%);
+          clip-path: polygon(20% 0, 100% 0, 100% 70%, 80% 100%, 0 99%, 0 34%);
+  margin: 40px auto 0;
+  transition: all 0.5s;
+}
+.explore-media-button__wrap:hover {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.explore-media-button__wrap .explore-media-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #23134b;
+  padding: 11px 48px 12px 28px;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 70%, 80% 100%, 0 99%, 0 34%);
+          clip-path: polygon(20% 0, 100% 0, 100% 70%, 80% 100%, 0 99%, 0 34%);
+}
+.explore-media-button__wrap .arrow-explore {
+  position: absolute;
+  width: 28px;
+  height: auto;
+  right: 15px;
+  top: 18px;
 }
 
 .intro {
@@ -502,6 +536,8 @@ h2 {
 }
 .intro-nft .nft__descr {
   position: absolute;
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0% 25%);
+          clip-path: polygon(15% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0% 25%);
   bottom: 0;
   right: -80px;
   font-family: "Rajdhani", sans-serif;
@@ -638,10 +674,6 @@ h2 {
 
 .topnft-header {
   margin-bottom: 47px;
-}
-
-.topnft-items {
-  gap: 35px;
 }
 
 .topnft-item {
@@ -844,6 +876,10 @@ h2 {
   left: 50%;
   top: -103px;
   transform: translateX(-50%);
+}
+.user-item__photo {
+  width: 100%;
+  height: auto;
 }
 .user-item__name {
   font-weight: 500;
@@ -1071,6 +1107,10 @@ h2 {
   margin-right: 76px;
   height: auto;
   border-radius: 4.42184px;
+  background-image: url(../img/subscribe-media.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .subscribe-form {
@@ -1133,6 +1173,9 @@ h2 {
   }
 }
 @media screen and (max-width: 479.98px) {
+  .explore-media-button__wrap {
+    display: block;
+  }
   h2 {
     font-size: 16px;
     line-height: 20px;
@@ -1201,6 +1244,8 @@ h2 {
     width: 100%;
   }
   .intro-nft .nft__descr {
+    -webkit-clip-path: none;
+            clip-path: none;
     left: 0;
     bottom: -85px;
     width: 100%;
@@ -1293,5 +1338,216 @@ h2 {
   }
   .explore-column__img {
     width: 60%;
+  }
+  .users {
+    margin: 108px 0;
+  }
+  .users-viewall {
+    display: none;
+  }
+  .users-header {
+    margin-bottom: 30px;
+  }
+  .user-item__descr {
+    padding: 52px 27px 27px;
+  }
+  .user-item__photo-wrap {
+    width: 112px;
+    height: 112px;
+    top: -70px;
+  }
+  .user-item__name {
+    font-size: 16px;
+  }
+  .user-item__nikname {
+    font-size: 14px;
+  }
+  .sellers-container {
+    margin-bottom: 35px;
+  }
+  .item-status__num {
+    font-size: 22px;
+  }
+  .item-status__title {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .sellers-descr {
+    width: 100%;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .sellers-item {
+    width: 100%;
+    padding: 20px 15px 20px;
+    border-radius: 20px;
+  }
+  .sellers-item:nth-of-type(n+5) {
+    display: none;
+  }
+  .sellers-item__num {
+    font-size: 14px;
+  }
+  .sellers-item__photo {
+    width: 51px;
+    height: 51px;
+    margin: 0 10px 0 13px;
+  }
+  .sellers-item__descr {
+    gap: 11px;
+  }
+  .sellers-item__name {
+    font-size: 14px;
+  }
+  .sellers-item__condition {
+    font-size: 10px;
+  }
+  .sellers-item__persent {
+    font-size: 11px;
+    line-height: 20px;
+    padding: 4.7px 12px 5.7px;
+    border-radius: 12px;
+  }
+  .sellers-button {
+    display: none;
+  }
+  .whats {
+    margin: 108px 0 198px;
+    height: 300px;
+  }
+  .whats-block {
+    width: 89.3333333333%;
+    left: 22px;
+    bottom: -90px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .whats-title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .whats-text {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  .whats-links {
+    margin-top: 26px;
+    gap: 26px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .whats-link__watch-video {
+    margin-left: 15px;
+  }
+  .whats-link__watch-video::before {
+    content: url(../img/whats-triangle-media.png);
+    width: 7.11px;
+    height: 10.35px;
+    top: 45%;
+  }
+  .subscribe {
+    margin-bottom: 108px;
+  }
+  .subscribe-container {
+    padding: 0;
+    flex-direction: column;
+    gap: 108px;
+  }
+  .subscribe-bg {
+    order: 1;
+    width: 100%;
+    height: 380px;
+    margin-right: 0;
+    border-radius: 0;
+  }
+  .subscribe-form {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 25px;
+  }
+  .subscribe-title {
+    margin: 0;
+    font-size: 26px;
+    line-height: 33px;
+  }
+  .subscribe-text {
+    margin: 18px 0 32px;
+    font-size: 13px;
+    line-height: 23px;
+  }
+  .subscribe-email {
+    font-size: 10px;
+    line-height: 18px;
+    padding: 8px 11px;
+    box-sizing: border-box;
+    border-radius: 3.64865px 0px 0px 3.64865px;
+  }
+  .subscribe-button {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 7px 22px 10px;
+    border-radius: 0px 3.64865px 3.64865px 0px;
+  }
+  .container.footer-container {
+    padding: 30px 25px;
+    flex-direction: column;
+  }
+  .footer-container::before {
+    width: 86.6666666667%;
+  }
+  .footer-container::after {
+    height: 0;
+  }
+  .footer-social {
+    width: 100%;
+    margin-right: 0;
+  }
+  .footer-nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer-social__links {
+    margin-bottom: 50px;
+  }
+  .footer-nav__menu-title {
+    padding: 16px 0;
+    border-bottom: 1.11px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    cursor: pointer;
+  }
+  .footer-nav__menu-title.active::after {
+    transform: rotate(180deg);
+  }
+  .footer-nav__menu-title::after {
+    content: url(../img/arrow-bottom-media.svg);
+    position: absolute;
+    top: 14px;
+    right: 27px;
+  }
+  .panel {
+    display: none;
+    overflow: hidden;
+    margin-top: 16px;
+  }
+  .panel .footer-nav__menu-link {
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .copyright-container {
+    flex-direction: column;
+  }
+  .copyright-container p {
+    order: 1;
+    margin-top: 38px;
+    text-align: center;
+  }
+  .copyright-menu {
+    justify-content: space-around;
+  }
+  .copyright-menu__list::after {
+    display: none;
+  }
+  .sitemap {
+    display: none;
   }
 }

@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220623181926">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220623181926"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220623233023">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220623233023"/>
     <!-- ------------------google-fonts-------------------- -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap&_v=20220623181926" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap&_v=20220623181926" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap&_v=20220623233023" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap&_v=20220623233023" rel="stylesheet">
     <title>OceanNFT</title>
 </head>
 <body>
@@ -115,9 +115,9 @@
                             <h2 class="topnft-title">Top NFT’s now</h2>
                             <a href="#" class="topnft-viewall viewall">View all<img src="img/arrow.svg" alt="arrow"></a>
                         </div>
-                        <!-- <div class="swiper topnft-swiper"> -->
-                            <div class="topnft-items flex">
-                                <div class="topnft-item">
+                        <div class="swiper topnft-swiper">
+                            <div class="topnft-items flex swiper-wrapper">
+                                <div class="topnft-item swiper-slide">
                                     <img src="img/Apollo Eth.jpg" class="nft-img" alt="nft">
                                     <div class="nft__descr flex">
                                         <div class="descr-column">
@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="topnft-item">
+                                <div class="topnft-item swiper-slide">
                                     <img src="img/Sassy Bull.jpg" class="nft-img" alt="nft">
                                     <div class="nft__descr flex">
                                         <div class="descr-column">
@@ -189,7 +189,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="topnft-item">
+                                <div class="topnft-item swiper-slide">
                                     <img src="img/Satisfying.jpg" class="nft-img" alt="nft">
                                     <div class="nft__descr flex">
                                         <div class="descr-column">
@@ -226,7 +226,8 @@
                                     </div>
                                 </div>
                             </div>
-                        <!-- </div> -->
+                        </div>
+                        <div class="explore-media-button__wrap"><button class="explore-media-button">Explore<img src="img/arrow-explore.svg" alt="arrow" class="arrow-explore"></button></div>
                     </div>
                 </section>
                 <section class="explore">
@@ -333,6 +334,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="explore-media-button__wrap"><button class="explore-media-button">Explore<img src="img/arrow-explore.svg" alt="arrow" class="arrow-explore"></button></div>
                     </div>
                 </section>
                 <section class="sellers">
@@ -462,6 +464,7 @@
                         </div>
                     </div>
                     <button class="sellers-button">Explore all</button>
+                    <div class="explore-media-button__wrap"><button class="explore-media-button">Explore<img src="img/arrow-explore.svg" alt="arrow" class="arrow-explore"></button></div>
                 </section>
                 <section class="whats">
                     <div class="container whats-container">                     
@@ -480,7 +483,7 @@
 
                 <section class="subscribe">
                     <div class="container subscribe-container flex">
-                        <img src="img/subscribe.jpg" alt="subscribe-bg" class="subscribe-bg">
+                        <div class="subscribe-bg"></div>
                         <form action="" class="subscribe-form">
                             <h2 class="subscribe-title">Subscribe to us</h2>
                             <p class="subscribe-text">Specially developed to help restore a more youthful appearance with improved radiance and bounce.</p>
@@ -507,12 +510,13 @@
         </div>
         <nav class="footer-nav flex">
             <ul class="footer-nav__menu market">
-                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Market place</a></li>
-                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Overview</a></li>
-                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Features<span class="footer-nav__menu-new">new</span></a></li>
-                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Tutorials</a></li>
-                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Pricing</a></li>
-                <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Releases</a></li>
+                <li class="footer-nav__menu-list footer-nav__menu-title"><a href="#" class="footer-nav__menu-link">Market place</a>
+                    <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Overview</a></li>
+                    <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Features<span class="footer-nav__menu-new">new</span></a></li>
+                    <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Tutorials</a></li>
+                    <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Pricing</a></li>
+                    <li class="footer-nav__menu-list"><a href="#" class="footer-nav__menu-link">Releases</a></li>
+                </li>
             </ul>
 
             <ul class="footer-nav__menu collectibles">
@@ -557,14 +561,14 @@
         <ul class="copyright-menu flex">
             <li class="copyright-menu__list"><a href="#" class="copyright-menu__link">Terms & Conditions</a></li>
             <li class="copyright-menu__list"><a href="#" class="copyright-menu__link">Privacy Policy</a></li>
-            <li class="copyright-menu__list"><a href="#" class="copyright-menu__link">Sitemap</a></li>
+            <li class="copyright-menu__list sitemap"><a href="#" class="copyright-menu__link">Sitemap</a></li>
         </ul>
     </div>
 </footer>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20220623181926" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220623181926"></script>
-    <script src="js/main.js?_v=20220623181926"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20220623233023" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?_v=20220623233023"></script>
+    <script src="js/main.js?_v=20220623233023"></script>
 </body>
 </html>
