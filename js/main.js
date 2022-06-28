@@ -1,3 +1,41 @@
+// function someFunc() {
+//   var w = window.innerWidth;
+//   if (w < 768) {
+//     console.log("Че-то делаем");
+//     var acc = document.getElementsByClassName("accordeon");
+//     for (var i = 0; i < acc.length; i++) {
+//         acc[i].addEventListener("click", function() {
+//             this.classList.toggle("active");
+//             var panel = this.nextElementSibling;
+//             if (panel.style.display === "block") {
+//                 panel.style.display = "none";
+//             } else {
+//                 panel.style.display = "block";
+//             }
+//         });
+//     }
+//   }
+// }
+
+// // Выполняем заново при изменении размера окна
+// window.addEventListener('resize', function() {
+//   console.log("Размер окна изменен");
+//   someFunc();
+// });
+
+
+
+// function divClass(a) {
+//   divClass.elem.classList[a ? 'add' : 'remove']('accordeon');
+// }
+// divClass.elem = document.getElementByClassName('footer-nav__menu-title');
+// window.onresize = function() {
+//   divClass(this.innerWidth < 480);
+// }
+// window.onresize();
+
+
+
 // ----------------------------BURGER-MENU----------------------
 let menuBtn = document.querySelector('.media-menu__icon');
 let mainMenu = document.querySelector('.header-menu');
@@ -36,14 +74,25 @@ function onTabClick(item) {
 }
 document.querySelector('.explore-button').click();
 
-// ------------------ACCORDION--------------------
-var acc = document.getElementsByClassName("accordion");
+// ------------------ACCORDEON--------------------
+function classFunction(){
+  if(jQuery('body').width()<768){ 
+    jQuery('.footer-nav__menu-title').addClass('accordeon');
+    jQuery('.footer-nav__menu').addClass('panel');
+  }
+  else{      
+    jQuery('.footer-nav__menu-title').removeClass('accordeon');
+    jQuery('.footer-nav__menu').removeClass('panel');
+  }
+}
+classFunction();
+jQuery(window).resize(classFunction);
+var acc = document.getElementsByClassName("accordeon");
 var i;
-
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var panel = this.firstElementChild;
+        var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
             panel.style.display = "none";
         } else {
@@ -61,7 +110,7 @@ var swiper = new Swiper(".topnft-swiper", {
         slidesPerView: 1,
         spaceBetween: 20
       },
-      768: {
+      640: {
         slidesPerView: 2,
         spaceBetween: 30
       },
@@ -80,7 +129,7 @@ var swiper = new Swiper(".topnft-swiper", {
         slidesPerView: 1,
         spaceBetween: 20
       },
-      768: {
+      640: {
         slidesPerView: 2,
         spaceBetween: 30
       },
